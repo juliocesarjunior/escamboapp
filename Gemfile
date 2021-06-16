@@ -44,6 +44,7 @@ source 'https://rails-assets.org' do
   # Bootstrap
   gem 'rails-assets-bootstrap', '3.3.7'
   # Bootstrap Notify
+  gem 'rails-assets-notifyjs'
   #gem 'rails-assets-bootstrap.growl'
   # BootboxJS
   #gem 'rails-assets-bootbox'
