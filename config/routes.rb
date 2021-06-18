@@ -15,7 +15,7 @@ Rails.application.routes.draw do
 
   end
 
-  devise_for :admins#, :skip => [:registration]
+  devise_for :admins, :skip => [:registration]
   devise_for :members
   
   root 'site/home#index'
