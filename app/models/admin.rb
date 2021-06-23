@@ -10,12 +10,10 @@ class Admin < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   def role_br
-    if self.role =='full_access'
-      'Acesso Completo'
-      
+    if self.role == 'full_access'
+      'Acesso Completo'    
     else
       'Acesso Registro'
-
     end
     
   end
