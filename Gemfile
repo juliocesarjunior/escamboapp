@@ -47,7 +47,7 @@ source 'https://rails-assets.org' do
   gem 'rails-assets-notifyjs'
   #gem 'rails-assets-bootstrap.growl'
   # BootboxJS
-  #gem 'rails-assets-bootbox'
+  gem 'rails-assets-bootbox'
   # Animate CSS
   #gem 'rails-assets-animate-css'
   # Bootstrap Mardown
@@ -65,6 +65,8 @@ group :development, :test do
    gem 'better_errors'
    #Generate Entity-Relationship Diagrams for Rails applications
    gem "rails-erd"
+   #A library for generating fake data such as names, addresses, and phone numbers.
+  gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
 
 end
 
