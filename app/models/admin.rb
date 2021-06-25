@@ -4,7 +4,9 @@ class Admin < ApplicationRecord
   ROLES = {:full_access => 0, :restricted_access => 1}
 
   #Enums
-  enum role: {:full_access => 0, :restricted_access => 1}
+  #enum role: {:full_access => 0, :restricted_access => 1}
+    enum role: ROLES
+
 
   #Scopes
   scope :with_full_access, -> { where(role: ROLES[:full_access]) }
