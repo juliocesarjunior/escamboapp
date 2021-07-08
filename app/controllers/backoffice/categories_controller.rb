@@ -1,4 +1,4 @@
-claclass Backoffice::CategoriesController < BackofficeController
+class Backoffice::CategoriesController < BackofficeController
   before_action :set_category, only: [:edit, :update]
 
   def index
