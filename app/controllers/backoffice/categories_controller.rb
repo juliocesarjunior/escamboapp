@@ -1,5 +1,5 @@
 class Backoffice::CategoriesController < BackofficeController
-  before_action :set_category, only: [:edit, :update]
+  before_action :set_category, only: [:edit, :update, :destroy]
 
   def index
     @categories = Category.all
@@ -28,6 +28,14 @@ class Backoffice::CategoriesController < BackofficeController
       redirect_to backoffice_categories_path, notice: I18n.t('messages.updated_with', item: @category.description)
     else
       render :edit
+    end
+  end
+
+  def destroy
+    if @category.destroy
+      redirect_to backoffice_categories_path, notice: I18n.t('messages.destroyed_with', item: @category.description)
+    else
+      render :index
     end
   end
 
