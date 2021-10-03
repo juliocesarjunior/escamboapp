@@ -38,10 +38,10 @@ namespace :utils do
   task generate_ads: :environment do
     puts "Cadastrando ANÚNCIOS..."
 
-    100.times do
+    10.times do
       Ad.create!(
                  title: Faker::Lorem.sentence(word_count: 3),
-                 description: LeroleroGenerator.paragraph(Random.rand(3)),
+                 description: Faker::Lorem.paragraph(sentence_count: 2),
                  member: Member.all.sample,
                  category: Category.all.sample
                 )
