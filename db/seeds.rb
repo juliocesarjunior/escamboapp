@@ -45,10 +45,10 @@ puts "ADMINISTRADOR cadastrado com sucesso!"
 
 puts "Cadastrando o MEMBRO Padrão..."
 
-member = Member.new(
+Member.create(
   email: "membro@membro.com",
   password: "123456",
   password_confirmation: "123456"
 )
-
+ 
 puts "MEMBRO cadastrado com sucesso!"

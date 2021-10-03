@@ -15,6 +15,22 @@ namespace :utils do
 
     puts "ADMINISTRADOR cadastrado com sucesso!"
   end
+  #################################################################
+
+  desc "Cria Membros Fake"
+  task generate_members: :environment do
+    puts "Cadastrando MEMBROS..."
+
+    100.times do
+      Member.create!(
+        email: Faker::Internet.email,
+        password: "1234567890",
+        password_confirmation: "1234567890"
+      )
+    end
+
+    puts "MEMBROS cadastrados com sucesso!"
+  end
 
 #################################################################
 
@@ -23,7 +39,8 @@ namespace :utils do
     puts "Cadastrando ANÚNCIOS..."
 
     100.times do
-      Ad.create!(title: Faker::Lorem.sentence(rand(2..5)),
+      Ad.create!(
+                 title: Faker::Lorem.sentence(word_count: 3),
                  description: LeroleroGenerator.paragraph(Random.rand(3)),
                  member: Member.all.sample,
                  category: Category.all.sample
