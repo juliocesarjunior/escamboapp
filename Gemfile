@@ -15,12 +15,12 @@ gem 'devise-i18n'
 gem 'bootstrap_sb_admin_base_v2'
 #Integration of RubyMoney - Money with Rails
 gem 'money-rails', '~>1.12'
+#Easy file attachment management for ActiveRecord
+gem "paperclip", "~> 6.0.0"
 #Help ActiveRecord::Enum feature to work fine with I18n and simple_form.
 gem 'enum_help'
 #Pundit provides a set of helpers which guide you in leveraging regular Ruby classes and object oriented design patterns to build a simple, robust and scalable authorization system.
 gem "pundit"
-#Easy file attachment management for ActiveRecord
-gem "paperclip", "~> 6.0.0"
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use Puma as the app server

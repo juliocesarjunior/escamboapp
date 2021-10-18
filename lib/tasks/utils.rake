@@ -41,11 +41,12 @@ namespace :utils do
     100.times do
       Ad.create!(
                  title: Faker::Lorem.sentence(word_count: 3),
-                 description: Faker::Lorem.paragraph(sentence_count: 2),
+                 description: Faker::Lorem.paragraph(sentence_count: 4),
                  member: Member.all.sample,
                  category: Category.all.sample,
                  price: "#{Random.rand(999)}, #{Random.rand(99)}",
                  picture: File.new(Rails.root.join('public', 'templates', 'images-for-ads', "#{Random.rand(9)}.jpg"), 'r')
+
                 )
     end
 
