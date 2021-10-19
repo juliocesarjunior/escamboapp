@@ -46,7 +46,6 @@ puts "ADMINISTRADOR cadastrado com sucesso!"
 puts "Cadastrando o MEMBRO Padrão..."
 
 Member.create(
-  name: "Membro Padrão"
   email: "membro@membro.com",
   password: "1234567890",
   password_confirmation: "1234567890"
