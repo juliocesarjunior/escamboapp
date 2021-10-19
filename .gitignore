@@ -16,17 +16,15 @@
 /tmp/*
 !/log/.keep
 !/tmp/.keep
+/public/system
 
 # Ignore uploaded files in development
 /storage/*
 !/storage/.keep
-
 /node_modules
 /yarn-error.log
-
 /public/assets
 .byebug_history
-
 erd.pdf
 
 # Ignore master key for decrypting credentials and more.
